@@ -16,4 +16,12 @@ export class AuthService {
   get IsLoggedIn(){
     return this.loggedIn;
   }
+
+  login(username:string, pwd: string){
+    localStorage.setItem('currentUser',JSON.stringify(username));
+  }
+
+  logout(){
+    localStorage.removeItem('currentUser');
+  }
 }
