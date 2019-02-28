@@ -10,6 +10,15 @@ import { RegisterComponent } from './register/register.component';
 import {AuthGuard} from './auth.guard';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule,
+        MatMenuModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatTabsModule,
+        MatCheckboxModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +32,15 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatCardModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
