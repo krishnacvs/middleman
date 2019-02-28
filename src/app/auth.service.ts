@@ -14,7 +14,11 @@ export class AuthService {
   }
 
   get IsLoggedIn(){
-    return this.loggedIn;
+    if(localStorage.getItem('currentUser')){
+      return true;
+    } else {
+      return false;
+    }
   }
 
   login(username:string, pwd: string){
